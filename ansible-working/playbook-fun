@@ -1,0 +1,20 @@
+[defaults]
+INVENTORY = inventory_simple.yml
+all:
+  children:
+    webservers:
+      hosts:
+        webserver1:
+          ansible_host: <50.18.22.174>
+          ansible_connection: winrm
+          ansible_winrm_transport: ntlm
+          ansible_winrm_server_cert_validation: ignore
+          ansible_user: <Administrator>
+          ansible_password: <JustM300>
+        webserver2:    
+          ansible_host: <If you have one, IP or hostname of the second Windows server>
+          ansible_connection: winrm
+          ansible_winrm_transport: ntlm
+          ansible_winrm_server_cert_validation: ignore
+          ansible_user: <Administrator>
+          ansible_password: <JustM300>
